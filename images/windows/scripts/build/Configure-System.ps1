@@ -11,7 +11,7 @@ if ($LASTEXITCODE -ne 0) {
 
 # Set default version to 1 for WSL (aka LXSS - Linux Subsystem)
 # The value should be set in the default user registry hive
-# https://github.com/actions/runner-images/issues/5760
+# https://github.com/scibotaru/runner-images/issues/5760
 if (Test-IsWin22) {
     Write-Host "Setting WSL default version to 1"
 
@@ -31,7 +31,7 @@ if (Test-IsWin22) {
     $key.SetValue("DefaultVersion", "1", "DWord")
     $key.Handle.Close()
     [System.GC]::Collect()
-    
+
     Dismount-RegistryHive "HKLM\DEFAULT"
 }
 
@@ -79,7 +79,7 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 # allow msi to write to temp folder
-# see https://github.com/actions/runner-images/issues/1704
+# see https://github.com/scibotaru/runner-images/issues/1704
 cmd /c "icacls $env:SystemRoot\Temp /grant Users:f /t /c /q 2>&1" | Out-Null
 if ($LASTEXITCODE -ne 0) {
     throw "Failed to grant Users full control of $env:SystemRoot\Temp"

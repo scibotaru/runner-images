@@ -83,7 +83,7 @@ All the commands below should be executed in PowerShell.
 First, clone the runner-images repository and set the current directory to it:
 
 ```powershell
-git clone https://github.com/actions/runner-images.git
+git clone https://github.com/scibotaru/runner-images.git
 Set-Location runner-images
 ```
 
@@ -272,8 +272,8 @@ Generated tool versions and details can be found in related projects:
 
 The user, created during the image generation, does not exist in the resulting image. Hence, some configuration files related to the user's home directory need to be changed, as well as the file permissions for some directories. Scripts for that are located in the `post-gen` folder in the repository:
 
-- Windows: <https://github.com/actions/runner-images/tree/main/images/windows/assets/post-gen>
-- Linux: <https://github.com/actions/runner-images/tree/main/images/ubuntu/assets/post-gen>
+- Windows: <https://github.com/scibotaru/runner-images/tree/main/images/windows/assets/post-gen>
+- Linux: <https://github.com/scibotaru/runner-images/tree/main/images/ubuntu/assets/post-gen>
 
 **Note:** The default user for Linux should have `sudo privileges`.
 
@@ -301,7 +301,7 @@ The scripts are copied to the image during the generation process to the followi
 - **cleanup-logs.sh** - removes all build process logs from the machine;
 - **environment-variables.sh** - replaces `$HOME` with the default user's home directory for environment variables related to the default user home directory;
 - **homebrew-permissions.sh** - resets the Homebrew repository directory by running `git reset --hard` to make the working tree clean after changing permissions in /home and changes the repository directory owner to the current user;
-- **rust-permissions.sh** - fixes permissions for the Rust folder; a detailed issue explanation is provided in [runner-images/issues/572](https://github.com/actions/runner-images/issues/572).
+- **rust-permissions.sh** - fixes permissions for the Rust folder; a detailed issue explanation is provided in [runner-images/issues/572](https://github.com/scibotaru/runner-images/issues/572).
 
 ### Script Details: Windows
 

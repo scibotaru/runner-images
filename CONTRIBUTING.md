@@ -1,6 +1,6 @@
 # Contributing
 
-[fork]: https://github.com/actions/runner-images/fork
+[fork]: https://github.com/scibotaru/runner-images/fork
 [pr]: https://github.com//actions/runner-images/compare
 [code-of-conduct]: CODE_OF_CONDUCT.md
 

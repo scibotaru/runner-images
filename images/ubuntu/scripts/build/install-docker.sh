@@ -44,7 +44,7 @@ for plugin in $plugins; do
     install "$binary_path" "/usr/libexec/docker/cli-plugins/docker-$plugin"
 done
 
-# docker from official repo introduced different GID generation: https://github.com/actions/runner-images/issues/8157
+# docker from official repo introduced different GID generation: https://github.com/scibotaru/runner-images/issues/8157
 gid=$(cut -d ":" -f 3 /etc/group | grep "^1..$" | sort -n | tail -n 1 | awk '{ print $1+1 }')
 groupmod -g "$gid" docker
 chgrp -hR docker /run/docker.sock

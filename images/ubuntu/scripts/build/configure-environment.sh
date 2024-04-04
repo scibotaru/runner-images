@@ -15,7 +15,7 @@ set_etc_environment_variable "ImageOS" "${IMAGE_OS}"
 # Set the ACCEPT_EULA variable to Y value to confirm your acceptance of the End-User Licensing Agreement
 set_etc_environment_variable "ACCEPT_EULA" "Y"
 
-# This directory is supposed to be created in $HOME and owned by user(https://github.com/actions/runner-images/issues/491)
+# This directory is supposed to be created in $HOME and owned by user(https://github.com/scibotaru/runner-images/issues/491)
 mkdir -p /etc/skel/.config/configstore
 set_etc_environment_variable "XDG_CONFIG_HOME" '$HOME/.config'
 
@@ -41,10 +41,10 @@ echo 'vm.max_map_count=262144' | tee -a /etc/sysctl.conf
 echo 'fs.inotify.max_user_watches=655360' | tee -a /etc/sysctl.conf
 echo 'fs.inotify.max_user_instances=1280' | tee -a /etc/sysctl.conf
 
-# https://github.com/actions/runner-images/issues/9491
+# https://github.com/scibotaru/runner-images/issues/9491
 echo 'vm.mmap_rnd_bits=28' | tee -a /etc/sysctl.conf
 
-# https://github.com/actions/runner-images/pull/7860
+# https://github.com/scibotaru/runner-images/pull/7860
 netfilter_rule='/etc/udev/rules.d/50-netfilter.rules'
 rules_directory="$(dirname "${netfilter_rule}")"
 mkdir -p $rules_directory

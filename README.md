@@ -37,21 +37,21 @@ To build a VM machine from this repo's source, see the [instructions](docs/creat
 - In general the `-latest` label is used for the latest OS image version that is GA
 - Before moving the`-latest` label to a new OS version we will announce the change and give sufficient lead time for users to update their workflows
 
-[ubuntu-22.04]: https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2204-Readme.md
-[ubuntu-20.04]: https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2004-Readme.md
-[windows-2022]: https://github.com/actions/runner-images/blob/main/images/windows/Windows2022-Readme.md
-[windows-2019]: https://github.com/actions/runner-images/blob/main/images/windows/Windows2019-Readme.md
-[macOS-11]: https://github.com/actions/runner-images/blob/main/images/macos/macos-11-Readme.md
-[macOS-12]: https://github.com/actions/runner-images/blob/main/images/macos/macos-12-Readme.md
-[macOS-13]: https://github.com/actions/runner-images/blob/main/images/macos/macos-13-Readme.md
-[macOS-13-arm64]: https://github.com/actions/runner-images/blob/main/images/macos/macos-13-arm64-Readme.md
-[macOS-14]: https://github.com/actions/runner-images/blob/main/images/macos/macos-14-Readme.md
-[macOS-14-arm64]: https://github.com/actions/runner-images/blob/main/images/macos/macos-14-arm64-Readme.md
+[ubuntu-22.04]: https://github.com/scibotaru/runner-images/blob/main/images/ubuntu/Ubuntu2204-Readme.md
+[ubuntu-20.04]: https://github.com/scibotaru/runner-images/blob/main/images/ubuntu/Ubuntu2004-Readme.md
+[windows-2022]: https://github.com/scibotaru/runner-images/blob/main/images/windows/Windows2022-Readme.md
+[windows-2019]: https://github.com/scibotaru/runner-images/blob/main/images/windows/Windows2019-Readme.md
+[macOS-11]: https://github.com/scibotaru/runner-images/blob/main/images/macos/macos-11-Readme.md
+[macOS-12]: https://github.com/scibotaru/runner-images/blob/main/images/macos/macos-12-Readme.md
+[macOS-13]: https://github.com/scibotaru/runner-images/blob/main/images/macos/macos-13-Readme.md
+[macOS-13-arm64]: https://github.com/scibotaru/runner-images/blob/main/images/macos/macos-13-arm64-Readme.md
+[macOS-14]: https://github.com/scibotaru/runner-images/blob/main/images/macos/macos-14-Readme.md
+[macOS-14-arm64]: https://github.com/scibotaru/runner-images/blob/main/images/macos/macos-14-arm64-Readme.md
 [self-hosted runners]: https://help.github.com/en/actions/hosting-your-own-runners
 
 ## Announcements
 
-See notable upcoming changes by viewing issues with the [Announcement](https://github.com/actions/runner-images/labels/Announcement) label.
+See notable upcoming changes by viewing issues with the [Announcement](https://github.com/scibotaru/runner-images/labels/Announcement) label.
 
 ## Image Definitions
 
@@ -86,11 +86,11 @@ The `-latest` migration process is gradual and happens over 1-2 months in order 
 
 *How to best follow along with changes*
 
-1. Find the latest releases for this repository [here.](https://github.com/actions/runner-images/releases)
+1. Find the latest releases for this repository [here.](https://github.com/scibotaru/runner-images/releases)
 2. Subscribe to the releases coming out of this repository, instructions [here.](https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications#configuring-your-watch-settings-for-an-individual-repository)
 3. Upcoming changes: A pre-release is created when the deployment of an image has started. As soon as the deployment is finished, the pre-release is converted to a release. If you have subscribed to releases, you will get notified of pre-releases as well.
 
-   - You can also track upcoming changes using the [awaiting-deployment](https://github.com/actions/runner-images/labels/awaiting-deployment) label.
+   - You can also track upcoming changes using the [awaiting-deployment](https://github.com/scibotaru/runner-images/labels/awaiting-deployment) label.
 4. For high impact changes, we will post these in advance to the GitHub Changelog on our [blog](https://github.blog/changelog/) and on [twitter](https://twitter.com/GHchangelog).
    - Ex: breaking changes, GA or deprecation of images
 
@@ -160,8 +160,8 @@ In general, these are the guidelines we follow when deciding what to pre-install
 
 ## How to Interact with the Repo
 
-- **Issues**: To file a bug report, or request tools to be added/updated, please [open an issue using the appropriate template](https://github.com/actions/runner-images/issues/new/choose)
-- **Discussions**: If you want to share your thoughts about image configuration, installed software, or bring a new idea, please create a new topic in a [discussion](https://github.com/actions/runner-images/discussions) for a corresponding category. Before making a new discussion please make sure no similar topics were created earlier.
+- **Issues**: To file a bug report, or request tools to be added/updated, please [open an issue using the appropriate template](https://github.com/scibotaru/runner-images/issues/new/choose)
+- **Discussions**: If you want to share your thoughts about image configuration, installed software, or bring a new idea, please create a new topic in a [discussion](https://github.com/scibotaru/runner-images/discussions) for a corresponding category. Before making a new discussion please make sure no similar topics were created earlier.
 - For general questions about using the runner images or writing your Actions workflow, please open requests in the [GitHub Actions Community Forum](https://github.community/c/github-actions/41).
 
 ## FAQs
@@ -178,7 +178,7 @@ The availability of images for GitHub Actions and Azure DevOps is the same. Howe
    <summary><b><i>What image version is used in my build?</b></i></summary>
 
 Usually, image deployment takes 2-3 days, and documentation in the `main` branch is only updated when deployment is finished. To find out which image version and what software versions are used in a specific build, see `Set up job` (GitHub Actions) or `Initialize job` (Azure DevOps) step log.
-<img width="1440" alt="actions-runner-image" src="https://github.com/actions/runner-images/assets/88318005/922a8bf5-3e4d-4265-9527-b3b51e6bf9c8">
+<img width="1440" alt="actions-runner-image" src="https://github.com/scibotaru/runner-images/assets/88318005/922a8bf5-3e4d-4265-9527-b3b51e6bf9c8">
 </details>
 
 <details>

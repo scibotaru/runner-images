@@ -15,7 +15,7 @@ get_chromium_revision() {
     # but also for similar ones, so that we can get a previous one if the required revision is not found
     chrome_revision_prefix=${chrome_revision:0:${#chrome_revision}/2+1}
     SEARCH_URL="https://www.googleapis.com/storage/v1/b/chromium-browser-snapshots/o?delimiter=/&prefix=Linux_x64"
-    # Revision can include a hash instead of a number. Need to filter it out https://github.com/actions/runner-images/issues/5256
+    # Revision can include a hash instead of a number. Need to filter it out https://github.com/scibotaru/runner-images/issues/5256
     revisions_available=$(curl -s $SEARCH_URL/${chrome_revision_prefix} | jq -r '.prefixes[]' | grep -E "Linux_x64\/[0-9]+\/"| cut -d "/" -f 2 | sort --version-sort)
 
     # If required Chromium revision is not found in the list

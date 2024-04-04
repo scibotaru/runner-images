@@ -1,6 +1,6 @@
 | Announcements |
 |-|
-| [[Ubuntu, Windows] Docker Compose v1 will be removed from images on April, 1](https://github.com/actions/runner-images/issues/9557) |
+| [[Ubuntu, Windows] Docker Compose v1 will be removed from images on April, 1](https://github.com/scibotaru/runner-images/issues/9557) |
 ***
 # Ubuntu 22.04
 - OS Version: 22.04.4 LTS
@@ -381,4 +381,3 @@ Use the following command as a part of your job to start the service: 'sudo syst
 | xz-utils               | 5.2.5-2ubuntu1                      |
 | zip                    | 3.0-12build2                        |
 | zsync                  | 0.6.2-3ubuntu1                      |
-

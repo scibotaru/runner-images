@@ -8,7 +8,7 @@ $devEnvPath = "$vsInstallRoot\Common7\IDE\devenv.exe"
 cmd.exe /c "`"$devEnvPath`" /updateconfiguration"
 
 #
-# https://github.com/actions/runner-images/issues/5301
+# https://github.com/scibotaru/runner-images/issues/5301
 #
 $warmup_vdproj = $(Join-Path $PSScriptRoot 'warmup.vdproj')
 & "$devEnvPath" $warmup_vdproj /build Release | Out-Null

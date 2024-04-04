@@ -35,7 +35,7 @@ $avPreference | Foreach-Object {
     Set-MpPreference @avParams
 }
 
-# https://github.com/actions/runner-images/issues/4277
+# https://github.com/scibotaru/runner-images/issues/4277
 # https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/microsoft-defender-antivirus-compatibility?view=o365-worldwide
 $atpRegPath = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection'
 if (Test-Path $atpRegPath) {

@@ -20,8 +20,8 @@ echo "Creating the symlink for [now] command to vercel CLI"
 ln -s /usr/local/bin/vercel /usr/local/bin/now
 
 # fix global modules installation as regular user
-# related issue https://github.com/actions/runner-images/issues/3727
-sudo chmod -R 777 /usr/local/lib/node_modules 
+# related issue https://github.com/scibotaru/runner-images/issues/3727
+sudo chmod -R 777 /usr/local/lib/node_modules
 sudo chmod -R 777 /usr/local/bin
 
 rm -rf ~/n

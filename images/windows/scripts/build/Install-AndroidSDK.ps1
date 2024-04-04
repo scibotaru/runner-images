@@ -9,7 +9,7 @@ $SDKInstallRoot = "C:\Program Files (x86)\Android\android-sdk"
 
 # Hardlink to the Android SDK installation directory with no spaces in the path.
 # ANDROID_NDK* env vars should not contain spaces, otherwise ndk-build.cmd gives an error
-# https://github.com/actions/runner-images/issues/1122
+# https://github.com/scibotaru/runner-images/issues/1122
 $SDKRootPath = "C:\Android\android-sdk"
 
 #region functions
@@ -37,7 +37,7 @@ function Install-AndroidSDKPackages {
         [AllowNull()]
         [string[]] $Packages
     )
-    
+
     # The sdkmanager.bat script is used to install Android SDK packages.
     $SDKManager = "$SDKRootPath\cmdline-tools\latest\bin\sdkmanager.bat"
 
@@ -59,7 +59,7 @@ function Install-AndroidSDKPackages {
 # get packages to install from the toolset
 $androidToolset = (Get-ToolsetContent).android
 # Newer version(s) require Java 11 by default
-# See https://github.com/actions/runner-images/issues/6960
+# See https://github.com/scibotaru/runner-images/issues/6960
 $cmdlineToolsUrl = $androidToolset.commandline_tools_url
 $cmdlineToolsArchPath = Invoke-DownloadWithRetry $cmdlineToolsUrl
 
@@ -67,7 +67,7 @@ Test-FileChecksum $cmdlineToolsArchPath -ExpectedSHA256Sum $androidToolset.hash
 
 Expand-7ZipArchive -Path $cmdlineToolsArchPath -DestinationPath "${SDKInstallRoot}\cmdline-tools"
 
-# cmdline tools should be installed in ${SDKInstallRoot}\cmdline-tools\latest\bin, but archive contains ${SDKInstallRoot}\cmdline-tools\bin 
+# cmdline tools should be installed in ${SDKInstallRoot}\cmdline-tools\latest\bin, but archive contains ${SDKInstallRoot}\cmdline-tools\bin
 # we need to create the proper folder structure
 Invoke-ScriptBlockWithRetry -Command {
     Rename-Item "${SDKInstallRoot}\cmdline-tools\cmdline-tools" "latest" -ErrorAction Stop
@@ -147,7 +147,7 @@ $ndkRoot = "$SDKRootPath\ndk\$ndkDefaultVersion"
 # Create env variables
 [Environment]::SetEnvironmentVariable("ANDROID_HOME", $SDKRootPath, "Machine")
 [Environment]::SetEnvironmentVariable("ANDROID_SDK_ROOT", $SDKRootPath, "Machine")
-# ANDROID_NDK, ANDROID_NDK_HOME, and ANDROID_NDK_ROOT variables should be set as many customer builds depend on them https://github.com/actions/runner-images/issues/5879
+# ANDROID_NDK, ANDROID_NDK_HOME, and ANDROID_NDK_ROOT variables should be set as many customer builds depend on them https://github.com/scibotaru/runner-images/issues/5879
 [Environment]::SetEnvironmentVariable("ANDROID_NDK", $ndkRoot, "Machine")
 [Environment]::SetEnvironmentVariable("ANDROID_NDK_HOME", $ndkRoot, "Machine")
 [Environment]::SetEnvironmentVariable("ANDROID_NDK_ROOT", $ndkRoot, "Machine")

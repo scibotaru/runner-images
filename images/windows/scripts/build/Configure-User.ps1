@@ -4,8 +4,8 @@
 ################################################################################
 
 #
-# more: https://github.com/actions/runner-images-internal/issues/5320
-#       https://github.com/actions/runner-images/issues/5301#issuecomment-1648292990
+# more: https://github.com/scibotaru/runner-images-internal/issues/5320
+#       https://github.com/scibotaru/runner-images/issues/5301#issuecomment-1648292990
 #
 
 Write-Host "Warmup 'devenv.exe /updateconfiguration'"

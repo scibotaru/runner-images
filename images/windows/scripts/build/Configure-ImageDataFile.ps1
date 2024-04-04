@@ -13,16 +13,16 @@ $imageVersionComponents = $imageVersion.Split('.')
 $imageMajorVersion = $imageVersionComponents[0]
 $imageMinorVersion = $imageVersionComponents[1]
 $imageDataFile = $env:IMAGEDATA_FILE
-$githubUrl = "https://github.com/actions/runner-images/blob"
+$githubUrl = "https://github.com/scibotaru/runner-images/blob"
 
 if (Test-IsWin22) {
     $imageLabel = "windows-2022"
     $softwareUrl = "${githubUrl}/win22/$imageMajorVersion.$imageMinorVersion/images/windows/Windows2022-Readme.md"
-    $releaseUrl = "https://github.com/actions/runner-images/releases/tag/win22%2F$imageMajorVersion.$imageMinorVersion"
+    $releaseUrl = "https://github.com/scibotaru/runner-images/releases/tag/win22%2F$imageMajorVersion.$imageMinorVersion"
 } elseif (Test-IsWin19) {
     $imageLabel = "windows-2019"
     $softwareUrl = "${githubUrl}/win19/$imageMajorVersion.$imageMinorVersion/images/windows/Windows2019-Readme.md"
-    $releaseUrl = "https://github.com/actions/runner-images/releases/tag/win19%2F$imageMajorVersion.$imageMinorVersion"
+    $releaseUrl = "https://github.com/scibotaru/runner-images/releases/tag/win19%2F$imageMajorVersion.$imageMinorVersion"
 } else {
     throw "Invalid platform version is found. Either Windows Server 2019 or 2022 are required"
 }

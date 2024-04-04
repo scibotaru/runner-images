@@ -17,7 +17,7 @@ Function Install-VisualStudio {
 
     .PARAMETER RequiredComponents
         The list of required components. Required parameter.
-    
+
     .PARAMETER ExtraArgs
         The extra arguments to pass to the bootstrapper. Optional parameter.
     #>
@@ -105,7 +105,7 @@ Function Install-VisualStudio {
                 Write-Host "============================"
                 Get-Content -Path $log -ErrorAction Continue
             }
-            
+
             exit $exitCode
         }
     }
@@ -203,7 +203,7 @@ function Get-VsixInfoFromMarketplace {
 
     switch ($Name) {
         # ProBITools.MicrosoftReportProjectsforVisualStudio2022 has different URL
-        # https://github.com/actions/runner-images/issues/5340
+        # https://github.com/scibotaru/runner-images/issues/5340
         "ProBITools.MicrosoftReportProjectsforVisualStudio2022" {
             $assetUri = "https://download.microsoft.com/download/b/b/5/bb57be7e-ae72-4fc0-b528-d0ec224997bd"
             $fileName = "Microsoft.DataTools.ReportingServices.vsix"

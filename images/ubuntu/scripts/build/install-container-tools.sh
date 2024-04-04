@@ -8,7 +8,7 @@
 source $HELPER_SCRIPTS/os.sh
 
 #
-# pin podman due to https://github.com/actions/runner-images/issues/7753
+# pin podman due to https://github.com/scibotaru/runner-images/issues/7753
 #                   https://bugs.launchpad.net/ubuntu/+source/libpod/+bug/2024394
 #
 if is_ubuntu20; then

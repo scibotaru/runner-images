@@ -66,7 +66,7 @@ function Install-JavaJDK {
     $archivePath = Invoke-DownloadWithRetry $downloadUrl
     Test-FileChecksum $archivePath -ExpectedSHA256Sum $asset.binary.package.checksum
 
-    # We have to replace '+' sign in the version to '-' due to the issue with incorrect path in Android builds https://github.com/actions/runner-images/issues/3014
+    # We have to replace '+' sign in the version to '-' due to the issue with incorrect path in Android builds https://github.com/scibotaru/runner-images/issues/3014
     $fullJavaVersion = $asset.version.semver -replace '\+', '-'
     # Remove 'LTS' suffix from the version if present
     $fullJavaVersion = $fullJavaVersion -replace '\.LTS$', ''
