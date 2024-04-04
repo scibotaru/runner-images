@@ -280,7 +280,6 @@ build {
       "${path.root}/../scripts/build/install-azure-cli.sh",
       "${path.root}/../scripts/build/install-azure-devops-cli.sh",
       "${path.root}/../scripts/build/install-bicep.sh",
-      "${path.root}/../scripts/build/install-codeql-bundle.sh",
       "${path.root}/../scripts/build/install-container-tools.sh",
       "${path.root}/../scripts/build/install-dotnetcore-sdk.sh",
       "${path.root}/../scripts/build/install-mono.sh",

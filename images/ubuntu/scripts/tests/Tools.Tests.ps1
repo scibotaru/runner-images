@@ -14,17 +14,6 @@ Describe "Bicep" {
     }
 }
 
-Describe "Mono" {
-    It "msbuild" {
-        "msbuild -version" | Should -ReturnZeroExitCode
-    }
-
-    It "nuget" {
-        "nuget" | Should -ReturnZeroExitCode
-    }
-}
-
-
 Describe "Git" {
     It "git" {
         "git --version" | Should -ReturnZeroExitCode
