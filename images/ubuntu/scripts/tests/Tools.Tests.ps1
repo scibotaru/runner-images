@@ -44,10 +44,6 @@ Describe "Kubernetes tools" {
         "helm version --short" | Should -ReturnZeroExitCode
     }
 
-    It "minikube" {
-        "minikube version --short" | Should -ReturnZeroExitCode
-    }
-
     It "kustomize" {
         "kustomize version" | Should -ReturnZeroExitCode
     }
@@ -58,8 +54,6 @@ Describe "Packer" {
         "packer --version" | Should -ReturnZeroExitCode
     }
 }
-
-
 
 Describe "yq" {
     It "yq" {

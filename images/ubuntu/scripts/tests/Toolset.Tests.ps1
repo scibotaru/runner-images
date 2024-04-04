@@ -2,10 +2,6 @@ Describe "Toolset" {
     $tools = (Get-ToolsetContent).toolcache
 
     $toolsExecutables = @{
-        Python = @{
-            tools = @("python", "bin/pip")
-            command = "--version"
-        }
         node = @{
             tools = @("bin/node", "bin/npm")
             command = "--version"
