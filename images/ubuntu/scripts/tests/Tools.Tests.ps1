@@ -124,3 +124,9 @@ Describe "yq" {
         "yq -V" | Should -ReturnZeroExitCode
     }
 }
+
+Describe 'Zstd' {
+    It 'zstd' {
+        'zstd --version' | Should -ReturnZeroExitCode
+    }
+}
