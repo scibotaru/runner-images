@@ -289,7 +289,6 @@ build {
       "${path.root}/../scripts/build/install-google-chrome.sh",
       "${path.root}/../scripts/build/install-kubernetes-tools.sh",
       "${path.root}/../scripts/build/install-mssql-tools.sh",
-      "${path.root}/../scripts/build/install-sqlpackage.sh",
       "${path.root}/../scripts/build/install-nvm.sh",
       "${path.root}/../scripts/build/install-nodejs.sh",
       "${path.root}/../scripts/build/install-packer.sh",
